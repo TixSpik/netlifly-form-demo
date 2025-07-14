@@ -1,12 +1,47 @@
-# React + Vite
+# 🚀 Formulario de Contacto React + Vite + Netlify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación es un formulario de contacto moderno construido con React y Vite, ideal para integrarse fácilmente con Netlify y recibir mensajes de usuarios de manera rápida y segura.
 
-Currently, two official plugins are available:
+## Características principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Formulario de contacto con validación de campos (nombre, correo y mensaje)
+- Envío de datos compatible con Netlify Forms
+- Interfaz atractiva y responsiva
+- Configuración mínima y lista para producción
 
-## Expanding the ESLint configuration
+## ¿Cómo ejecutar la app?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clona el repositorio:**
+
+   ```bash
+   git clone <URL-del-repositorio>
+   cd form-netlify-demo
+   ```
+
+2. **Instala las dependencias:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Inicia el servidor de desarrollo:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. Abre [http://localhost:5173](http://localhost:5173) en tu navegador para ver la app funcionando.
+
+## Despliegue en Netlify
+
+La app está lista para ser desplegada en Netlify. Solo sube el proyecto y Netlify detectará automáticamente el formulario para recibir mensajes.
+
+## Estructura del proyecto
+
+- `src/componets/contact-form.jsx`: Componente principal del formulario
+- `src/assets/styles/form-style.css`: Estilos personalizados
+- `index.html`: Configuración base para Netlify Forms
+
+---
+
+¡Personaliza el formulario y úsalo en tus proyectos!

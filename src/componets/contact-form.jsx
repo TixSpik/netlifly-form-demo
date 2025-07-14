@@ -13,7 +13,7 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch('/', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
@@ -21,16 +21,18 @@ export default function ContactForm() {
           ...formData,
         }).toString(),
       });
-      setFormData({ name: '', email: '', message: '' }); // Clear form
-      setSubmitted(true); 
+      if (response.ok) {
+        setFormData({ name: '', email: '', message: '' }); // Clear form
+        setSubmitted(true);
+      }
     } catch (error) {
       console.error('Form submission error:', error);
     }
   };
 
   return (
-    <div className="form-wrapper">
-      <h1>Contáctame</h1>
+    <div className="contact-card">
+      <h2>Contáctame</h2>
 
       {submitted ? (
         <p className="success-message">Gracias por tu mensaje 🎉</p>
@@ -42,15 +44,18 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
-          <label>Nombre</label>
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
-
-          <label>Correo electrónico</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-
-          <label>Mensaje</label>
-          <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required></textarea>
-
+          <div className="form-group">
+            <label htmlFor="name" >Nombre</label>
+            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required></textarea>
+          </div>
           <button type="submit">Enviar</button>
         </form>
       )}

@@ -1,72 +1,84 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #61d4b0, #8ee696);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f0f2f5;
+}
+
+.main-container {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
-.container {
-  width: 100%;
-  max-width: 600px;
-}
-
-.form-wrapper {
+.contact-card {
   background: #ffffff;
   padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  border: 2px solid #baf77c;
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form-wrapper h1 {
-  margin-bottom: 24px;
-  font-size: 28px;
+.contact-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
   color: #333;
   text-align: center;
 }
 
-form label {
-  display: block;
+form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+label {
   margin-bottom: 6px;
-  color: #333;
-  font-weight: 500;
   font-size: 14px;
+  color: #555;
 }
 
 input,
 textarea {
   width: 100%;
   padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
   font-size: 14px;
-  background-color: #fdfdfd;
-  transition: border-color 0.2s ease;
+  transition: border 0.2s ease;
+  box-sizing: border-box;
 }
 
 input:focus,
 textarea:focus {
-  border-color: #61d4b0;
   outline: none;
+  border-color: #61d4b0;
+  background: #fff;
 }
 
 button {
   width: 100%;
+  padding: 12px;
   background-color: #61d4b0;
   color: white;
-  padding: 14px;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
+  border-radius: 6px;
+  font-size: 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
@@ -74,7 +86,7 @@ button:hover {
 }
 
 .success-message {
-  font-size: 18px;
-  color: #4ebd9e;
   text-align: center;
+  font-size: 16px;
+  color: #4ebd9e;
 }
