@@ -20,13 +20,13 @@ export default function ContactForm() {
         >
           <input type="hidden" name="form-name" value="contact" />
 
-          <label htmlFor="name">Nombre</label>
+          <label>Nombre</label>
           <input type="text" id="name" name="name" required />
 
-          <label htmlFor="email">Correo electrónico</label>
+          <label>Correo electrónico</label>
           <input type="email" id="email" name="email" required />
 
-          <label htmlFor="message">Mensaje</label>
+          <label>Mensaje</label>
           <textarea id="message" name="message" rows="5" required></textarea>
 
           <button type="submit">Enviar</button>
