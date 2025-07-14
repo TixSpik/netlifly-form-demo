@@ -46,10 +46,10 @@ export default function ContactForm() {
           <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
 
           <label>Correo electrónico</label>
-          <input type="email" id="email" name="email" value={formData.name} onChange={handleChange} required />
+          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
 
           <label>Mensaje</label>
-          <textarea id="message" name="message" rows="5" value={formData.name} onChange={handleChange} required></textarea>
+          <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required></textarea>
 
           <button type="submit">Enviar</button>
         </form>
